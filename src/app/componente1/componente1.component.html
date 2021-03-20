@@ -1,0 +1,35 @@
+
+<div style="text-align: center;">
+
+  <h1>componente1 funciona!</h1>
+
+  <img src="assets/imagem1.jpg" alt="imagem 1">
+
+  <h5>Legenda para a imagem</h5>
+
+</div>
+
+<hr>
+
+<div>
+
+  <input type="number" (input)="this.numero = $event.target.value" />
+
+  <b>{{numero}}</b>
+
+<hr>
+
+  <h1 *ngIf="true" >Visível</h1>
+  <h1 *ngIf="false" >Invisível</h1>
+
+</div>
+
+<hr>
+
+
+<div *ngIf="this.numero %2 == 0; then blocoPar else blocoImpar">
+</div>
+<ng-template #blocoPar>PAR</ng-template>
+<ng-template #blocoImpar>IMPAR</ng-template>
+
+<hr>
